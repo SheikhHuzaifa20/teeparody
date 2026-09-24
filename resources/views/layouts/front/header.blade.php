@@ -55,11 +55,11 @@
                                             <strong class="text-dark text-truncate d-block">{{ Auth::user()->name }}</strong>
                                         </li>
                                         <li><hr class="dropdown-divider my-1"></li>
-                                        @if(in_array(Auth::user()->role, [1]))
+                                        {{-- @if(in_array(Auth::user()->role, [1]))
                                             <li><a class="dropdown-item py-2" href="{{ route('admin.dashboard') }}"><i class="fa-solid fa-gauge me-2 text-primary"></i>Admin Panel</a></li>
-                                        @else
+                                        @else --}}
                                             <li><a class="dropdown-item py-2" href="{{ route('account') }}"><i class="fa-solid fa-user me-2 text-primary"></i>My Account</a></li>
-                                        @endif
+                                        {{-- @endif --}}
                                         <li><a class="dropdown-item py-2 text-danger" href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
                                     @else
                                         <li><a class="dropdown-item py-2 fw-semibold" href="{{ route('signin') }}"><i class="fa-solid fa-right-to-bracket me-2 text-primary"></i>Sign In</a></li>

@@ -71,30 +71,34 @@
         background-color: #0056c6;
         box-shadow: 0 4px 12px rgba(0, 107, 239, 0.3);
     }
+    .banner-content {
+    display: flex;
+    justify-content: center;
+}
 </style>
 @endsection
 @section('content')
 
 <?php $segment = Request::segments(); ?>
 
-<section class="banner inner-banner" style="background-image: url({{ asset('images/banner.png')}});">
-    <div class="container-fluid">
+<section class="banner about-banner">
+    <div class="container">
         <div class="row">
-            <div class="col-12">
-                <ul>
-                    <li><img src="{{ asset('images/1-star.png') }}" alt="" ></li>
-                    <li>
-                        <div class="banner-content">
-                            <div class="section-heading">
-                                <h1 style="color: #006bef;">Account Details</h1>
-                            </div>
-                        </div>
-                    </li>
-                    <li><img src="{{ asset('images/1-star.png') }}" alt=""></li>
-                </ul>
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="banner-content animate">
+                    <h1><span class="blue">My Account</span>
+                    </h1>
+                    {{-- {!! $banner->description !!}
+                    <a href="{{route('product')}}" class="btn web-btn">
+                        Shop Now
+                    </a> --}}
+                </div>
             </div>
         </div>
     </div>
+    {{-- <div class="banner-girl">
+        <img src="{{asset('asset/images/banner-girl.png')}}" class="img-fluid" alt="">
+    </div> --}}
 </section>
 
 <main class="my-cart py-5">
