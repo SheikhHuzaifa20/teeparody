@@ -2,7 +2,9 @@
 <link rel="stylesheet" href="{{asset('plugins/vendors/dropify/dist/css/dropify.min.css')}}">
 @push('after-css')
     <style>
-
+.image-privew img {
+    height: 100px;
+}
         #rootwizard .nav-pills > li > a.active {
             background: #d3e0fc;
             color: #4886ff;

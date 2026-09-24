@@ -117,12 +117,12 @@
                     <li class="{{ request()->routeIs('admin.attributesvalue.*') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ route('admin.attributesvalue.index') }}"><i></i><span>Attribute Values</span></a>
                     </li>
-                    <li class="{{ request()->routeIs('admin.category*') ? 'active' : '' }}">
+                    {{-- <li class="{{ request()->routeIs('admin.category*') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ route('admin.category.index') }}"><i></i><span>Categories</span></a>
                     </li>
                     <li class="{{ request()->routeIs('admin.subcategory*') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ route('admin.subcategory.index') }}"><i></i><span>SubCategories</span></a>
-                    </li>
+                    </li> --}}
                     <li class="{{ request()->routeIs('admin.product*') ? 'active' : '' }}">
                         <a class="menu-item" href="{{ route('admin.product.index') }}"><i></i><span>Products</span></a>
                     </li>
