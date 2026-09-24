@@ -1,0 +1,186 @@
+/* about pg css start */
+
+.about-banner {
+    padding-top: 350px;
+}
+
+.about-the-product {
+    padding: 150px 0;
+}
+
+.abput-content {
+    padding-left: 2rem;
+}
+
+.abput-content h2 {
+    font-size: 70px;
+    line-height: 60px;
+    color: black;
+}
+
+.abput-content p {
+    color: #0b0e0c;
+    font-weight: 500;
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+.abput-content ul {
+    margin: 20px 0;
+}
+
+.abput-content ul li p {
+    margin: 5px 0;
+}
+
+.abput-content ul li p i {
+    color: #006bef;
+}
+
+/* about pg css end */
+
+
+/* contact pg css start */
+
+.contact-pg {
+    padding: 100px 0;
+}
+
+.contact-pg .client-say p {
+    width: 80%;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.contact-info-pg h3 {
+    color: black;
+    font-size: 50px;
+}
+
+.contact-info-pg p {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 500;
+    width: 75%;
+}
+
+.contact-info-pg ul {
+    padding-top: 20px;
+}
+
+.contact-info-pg ul li {
+    padding: 5px 0;
+}
+
+.social-author {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-author span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #006bef;
+    border-radius: 60%;
+    color: white;
+}
+
+.social-author h5 {
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.social-author h5 span {
+    background: transparent;
+    border-radius: unset;
+    color: #696f6b;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.contact-form form label {
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.contact-form form input {
+    margin-bottom: 15px;
+    border-radius: 0;
+    height: 50px;
+}
+
+.contact-form form textarea {
+    margin-bottom: 15px;
+    border-radius: 0;
+    height: unset;
+}
+
+/* contact pg css end */
+
+/* policy pg css start */
+
+.policy-content {
+    padding: 70px 0;
+}
+
+.privacy-content h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.privacy-content p {
+    margin: 15px 0;
+    color: #222222;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.privacy-content ul {
+    padding-left: 1rem;
+    padding-bottom: 20px;
+    list-style: disc !important;
+}
+
+.privacy-content ul li p {
+    margin: 0;
+}
+
+.privacy-content h2 {
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+/* policy pg css end */
+
+/* product inner css start */
+
+.product-inner-img img {
+    width: 100%;
+}
+
+.abput-content form label {
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.abput-content form select {
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    font-weight: 500;
+       font-size: 15px;
+    padding: 10px 10px;
+}
+/* product inner css end */

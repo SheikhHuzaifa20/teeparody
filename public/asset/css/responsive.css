@@ -1,0 +1,543 @@
+@media(max-width:1440px) {
+
+    .banner-girl img {
+        width: 27%;
+        right: 13%;
+    }
+
+    .banner {
+        padding: 250px 0 150px 0;
+    }
+
+    .collection-slider {
+        margin-top: 300px;
+    }
+
+    .shirt_slides h2 {
+        font-size: 120px;
+        margin-top: 30px;
+    }
+
+    footer {
+        padding: 50px 10px;
+    }
+
+    .about-banner .banner-girl img {
+        width: 26%;
+    }
+
+    .about-the-product {
+        padding: 100px 0 50px 0;
+    }
+    
+    .product-inner-banner {
+    padding-top: 350px;
+}
+    .product-inner-banner .banner-girl img {
+   width: 24% !important;
+}
+
+.testimonial .owl-nav button.owl-next {
+    background-color: #006bef !important;
+    right: 44.5%;
+}
+
+.testimonial .owl-nav button.owl-prev {
+    background-color: #142c4a !important;
+    left: 44.5%;
+}
+
+.abput-content h2 {
+    font-size:60px;
+}
+
+.product-picture img {
+ width: 100%;
+}
+
+}
+
+
+@media(max-width:1199px) {
+    
+       .product-inner-banner {
+    padding-top: 350px !important;
+}
+
+    .product-inner-banner .banner-girl img {
+   width:30% !important;
+}
+    .banner-content h1 {
+        font-size: 55px;
+        line-height: 50px;
+    }
+
+    .banner {
+        padding: 200px 0 100px 0;
+    }
+
+    .product-description h4 {
+        font-size: 16px;
+        margin-top: 0px;
+    }
+
+    .product-picture {
+    height: 300px;
+}
+
+
+
+    .cart-btn {
+        bottom: 40px;
+    }
+
+    .shirt_slides h2 {
+        font-size: 95px;
+    }
+
+    .our-discover h2 {
+        font-size: 60px;
+    }
+
+    .client-say h2 {
+        font-size: 60px;
+    }
+
+    .client-say p {
+        width: 60%;
+    }
+
+    .testimonial .owl-nav button.owl-next {
+        right: 43%;
+    }
+
+    .testimonial .owl-nav button.owl-prev {
+        left: 43%;
+    }
+
+    .social-links li a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-links li a i {
+        font-size: 12px;
+    }
+
+    .footer-logo p {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .footer-logo ul li a {
+        font-size: 13px;
+    }
+
+    .footer-logo ul li {
+        padding: 5px 0;
+    }
+
+    .last-para p {
+        font-size: 12px;
+    }
+
+    .abput-content h2 {
+        font-size: 50px;
+        line-height: 45px;
+    }
+
+    .abput-content p {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .contact-info-pg p {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .contact-pg {
+        padding: 50px 0;
+    }
+
+    .contact-pg .client-say p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 991px) {
+
+    .navbar-brand {
+        width: 20%;
+    }
+
+    div#navbarSupportedContent {
+        background: #006bef;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .navbar-nav li a {
+        color: white !important;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .top-icon span {
+        top: -8px;
+    }
+
+    .top-icon {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    span.icon-menu {
+        margin-top: 10px;
+    }
+
+    .banner-girl img {
+        right: 0;
+    }
+
+    .banner:before {
+        width: 20%;
+        height: 20%;
+    }
+
+    .banner-content p {
+        width: 65%;
+    }
+
+    .seller-heading h2 {
+        font-size: 40px;
+    }
+
+    .seller-heading p {
+        font-size: 14px;
+        width: 80%;
+    }
+
+    .product-main {
+        margin-top: 20px;
+    }
+
+    .cart-btn .btn {
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .cart-btn {
+        bottom: 58px;
+    }
+
+    .product-description h4 {
+        margin-top: 0;
+        font-size: 19px;
+    }
+    .product-picture {
+    height: 220px;
+}
+
+.product-picture img {
+    width: 100%;
+}
+
+    .collection-slider {
+        margin-top: 220px;
+    }
+
+    .shirt_slides h2 {
+        font-size: 60px;
+    }
+
+    .our-discover p {
+        width: 65%;
+    }
+
+    .discover_products {
+        text-align: center;
+    }
+
+    .discover-product {
+        padding: 30px 0 0 0;
+    }
+
+    .customer-qoute p {
+        font-size: 14px;
+    }
+
+    .customer-qoute h5 {
+        font-size: 16px;
+    }
+
+    .faq .client-say h2 {
+        font-size: 50px;
+    }
+
+    ul.social-links {
+        flex-wrap: wrap;
+    }
+
+    .contact-info li span {
+        font-size: 14px;
+    }
+
+    .last-para ul {
+        gap: 10px;
+    }
+
+    .abput-content h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .abput-content p {
+        font-size: 12px;
+    }
+
+    .abput-content {
+        padding-left: 0;
+    }
+
+    .about-the-product {
+        padding: 50px 0 20px 0;
+    }
+
+    .discover_products h5 {
+        font-size: 14px;
+    }
+
+    .contact-info-pg h3 {
+        font-size: 30px;
+    }
+
+    .contact-pg .client-say p {
+        width: 90%;
+    }
+}
+
+@media(max-width:767px) {
+
+    .banner-content {
+        text-align: center;
+    }
+
+    .banner {
+        padding-top: 140px;
+        padding-bottom: 50px;
+    }
+
+    .banner-girl {
+        display: none;
+    }
+
+    .banner-content p {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .banner-content h1 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .cart-btn {
+        bottom: 40px;
+    }
+
+    .collection-slider {
+        margin: 0;
+    }
+
+    .shirt_slides {
+        margin: 0;
+    }
+
+    .shirt_slides h2 {
+        font-size: 50px;
+    }
+
+    .our-discover h2 {
+        font-size: 50px;
+    }
+
+    .our-discover p {
+        width: 100%;
+    }
+
+    .discover_products {
+        margin-top: 30px;
+    }
+
+    .client-say h2 {
+        font-size: 40px;
+    }
+
+    .client-say p {
+        width: 88%;
+    }
+
+    .customer-qoute {
+        margin: 25px;
+    }
+
+    .testimonial .owl-nav button.owl-prev {
+        left: 30px;
+    }
+
+    .testimonial .owl-nav button.owl-next {
+        right: 30px;
+    }
+
+    .faq .client-say p {
+        width: 100%;
+    }
+
+    .faqs {
+        margin-top: 30px;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-logo p {
+        width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-links li a {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-links li a i {
+        font-size: 20px;
+    }
+
+    .footer-logo {
+        margin-top: 20px;
+    }
+
+    .footer-logo h5 {
+        margin-bottom: 5px;
+    }
+
+    .last-para {
+        display: block;
+        text-align: center;
+    }
+
+    .last-para ul {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    footer {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .abput-content {
+        text-align: center;
+        margin-top: 25px;
+    }
+    
+    .product-section {
+    padding: 50px;
+}
+
+.product-picture img {
+    width: 80%;
+}
+
+.product-description h4 {
+    font-size: 15px;
+}
+}
+
+@media(max-width:575px) {
+
+    .cart-btn {
+        bottom: 60px;
+    }
+
+    .shirt_slides h2 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    .our-discover h2 {
+        font-size: 35px;
+    }
+
+    .our-discover p {
+        font-size: 14px;
+    }
+
+    .testimonial {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        overflow: hidden;
+    }
+
+    .client-say h2 {
+        font-size: 30px;
+    }
+
+    .client-say p {
+        font-size: 15px;
+        width: 90%;
+    }
+
+    .testimonial .owl-nav button {
+        bottom: -30px;
+    }
+
+    .faq .client-say h2 {
+        font-size: 30px;
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+    }
+
+    .contact-pg .client-say p {
+        width: 100%;
+    }
+
+    .contact-info-pg {
+        text-align: center;
+    }
+
+    .contact-info-pg p {
+        width: 100%;
+    }
+
+    .social-author {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .social-author h5 span {
+        width: 100%;
+    }
+    .product-section {
+    padding: 20px;
+}
+
+.product-description h4 {
+    font-size: 19px;
+}
+
+.product-picture {
+    height: 180px;
+}
+}

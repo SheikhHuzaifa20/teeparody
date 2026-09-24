@@ -1,0 +1,708 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+    padding: 0;
+}
+
+ul {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Bebas Neue", sans-serif !important;
+    margin: 0;
+}
+
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.blue {
+    color: #006bef;
+}
+
+.red {
+    color: #dc2d33;
+}
+
+.web-btn {
+    background: #006bef;
+    padding: 6px 30px !important;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+    font-size: 20px !important;
+    transition: all ease 0.5s;
+}
+
+.web-btn:hover {
+    background: black;
+    color: white;
+    transition: all ease 0.5s;
+    box-shadow: 0 0 10px 1px black;
+}
+
+/* header css start */
+
+header {
+    position: absolute;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    width: 18%;
+    margin: 0;
+}
+
+.navbar-nav li a {
+    color: black !important;
+}
+
+.navbar-nav {
+    gap: 30px;
+}
+
+.top-icon {
+    position: relative;
+    z-index: 0;
+}
+
+.icon-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #212121;
+    width: 40px;
+    height: 40px;
+    border-radius: 60%;
+}
+
+.icon-menu i {
+    color: white;
+    font-size: 14px;
+}
+
+.side-top {
+    gap: 10px;
+}
+
+.top-icon input {
+    background: white;
+    border-radius: 30px;
+    height: 45px;
+}
+
+.top-icon span {
+    position: absolute;
+    z-index: 0;
+    top: 2px;
+    right: 6px;
+}
+
+.top-icon input::placeholder {
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* header css end */
+
+/* banner css start */
+
+
+.banner {
+    position: relative;
+    z-index: 0;
+    padding: 300px 0 150px 0;
+    overflow: hidden;
+}
+
+.banner:before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    background: #7aaceaad;
+    box-shadow: 0 0 100px 280px #7aaceaad;
+    border-radius: 60%;
+}
+
+.banner:after {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    background: #7aaceaad;
+    box-shadow: 0 0 100px 150px #7aaceaad;
+    border-radius: 60%;
+}
+
+.banner-girl img {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: 20%;
+    width: 17%;
+    animation: bannergirl 5s infinite linear;
+}
+
+.banner-content h1 {
+    font-size: 65px;
+    line-height: 70px;
+}
+
+.banner-content p {
+    color: #041637;
+    font-size: 16px;
+    width: 45%;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+/* banner css end */
+
+/* product-section css start */
+
+.product-section {
+    padding: 50px 20px;
+}
+
+.seller-heading {
+    text-align: center;
+}
+
+.seller-heading h2 {
+    font-size: 80px;
+}
+
+.seller-heading p {
+    color: #222222;
+    font-size: 16px;
+    width: 60%;
+    margin: auto;
+    font-weight: 500;
+}
+
+.product-main {
+    margin-top: 60px;
+    position: relative;
+    z-index: 0;
+}
+
+.product-picture {
+    background: #efefef;
+    padding: 30px 10px;
+    text-align: center;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.product-main.bg-blk .product-picture {
+    background: #212121;
+}
+
+.product-picture img {
+    animation: scalable 5s infinite linear;
+    width: 60%;
+}
+
+.product-description {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.product-description h4 {
+    font-size: 22px;
+}
+
+.product-description h6 {
+    color: #333333;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product-description h6 span i {
+    color: #ffb600;
+}
+
+.cart-btn {
+    position: absolute;
+    z-index: 0;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.cart-btn .btn {
+    /* margin-top: 20px; */
+    border-radius: 0;
+}
+
+
+.product-main-box-imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product-main-box-imgs .box-product-clk {
+    width: 16%;
+}
+/* product-section css end */
+
+/* product-section css start */
+
+.collection-slider {
+    padding: 50px 0 0 0;
+    background: #006bef;
+    margin-top: 350px;
+}
+
+.shirt_slides {
+    margin-top: -280px;
+}
+
+.collection-shirt {
+    text-align: center;
+    margin: auto;
+}
+
+.collection-shirt img {
+    width: 40% !important;
+    margin: auto;
+}
+
+.collection-shirt h5 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.shirt-slider .owl-nav button {
+    position: absolute;
+    z-index: 0;
+    top: 70%;
+    background-color: transparent !important;
+}
+
+.shirt-slider .owl-nav button i {
+    font-size: 50px;
+    color: #fff;
+}
+
+.shirt-slider .owl-nav button.owl-prev {
+    left: 0;
+}
+
+.shirt-slider .owl-nav button.owl-next {
+    right: 0;
+}
+
+.shirt_slides h2 {
+    font-size: 150px;
+    text-align: center;
+    color: #fff;
+}
+
+/* product-section css end */
+
+/* discover-product css start */
+
+.discover-product {
+    padding: 10px 0 50px 0;
+    overflow: hidden;
+}
+
+.our-discover {
+    text-align: center;
+}
+
+.our-discover h2 {
+    font-size: 80px;
+}
+
+.our-discover p {
+    font-size: 15px;
+    margin: auto;
+    width: 50%;
+    color: #000000;
+    font-weight: 500;
+}
+
+.discover_products {
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+
+.discover_products h5 {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #000000;
+    font-weight: 400;
+}
+
+/* discover-product css end */
+
+/* testimonial css start */
+
+.testimonial {
+    padding: 50px 0 100px 0;
+    overflow: hidden;
+}
+
+.client-say {
+    text-align: center;
+}
+
+.client-say h2 {
+    font-size: 80px;
+}
+
+.client-say p {
+    font-size: 17px;
+    margin: auto;
+    width: 49%;
+    color: #000000;
+    font-weight: 500;
+}
+
+.customer-qoute {
+    box-shadow: 0 0 10px 1px black;
+    margin: 10px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+
+.customer-qoute h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.customer-qoute h5 i {
+    color: #006bef;
+}
+
+.customer-qoute p {
+    color: #393939;
+    font-size: 15px;
+    font-weight: 500;
+    width: 90%;
+}
+
+.customer-info h5 img {
+    width: 40px !important;
+    filter: unset !important;
+}
+
+.customer-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customer-info img {
+    width: 60px !important;
+}
+
+.testimonial-slider .owl-item.active.center .customer-qoute {
+    margin-top: 40px;
+    background-color: #006bef;
+}
+
+.testimonial-slider .owl-item.active.center .customer-qoute h5 {
+    color: white;
+}
+
+.testimonial-slider .owl-item.active.center .customer-qoute h5 i {
+    color: white;
+}
+
+.testimonial-slider .owl-item.active.center .customer-qoute p {
+    color: white;
+    font-weight: 400;
+}
+
+.testimonial-slider .owl-item.active.center .customer-qoute .customer-info img {
+    filter: brightness(0) invert(0);
+}
+
+.testimonial .owl-nav button {
+    position: absolute;
+    z-index: 0;
+    border-radius: 60% !important;
+    width: 50px;
+    height: 50px;
+}
+
+.testimonial .owl-nav button i {
+    font-size: 15px;
+    color: #fff;
+}
+
+.testimonial .owl-nav button.owl-prev {
+    background-color: #142c4a !important;
+    left: 46.5%;
+}
+
+.testimonial .owl-nav button.owl-next {
+    background-color: #006bef !important;
+    right: 46.5%;
+}
+
+
+/* testimonial css end */
+
+/* faq css start */
+
+
+.faq {
+    padding: 50px 0;
+    background: #006bef;
+}
+
+.faqs {
+    margin-top: 60px;
+}
+
+.faq .client-say p {
+    color: white;
+    width: 70%;
+    font-weight: 300;
+}
+
+.faq .client-say h2 {
+    color: white;
+}
+
+
+.faq-item {
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+.faq-question {
+    padding: 18px 20px;
+    cursor: pointer;
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+    color: white;
+}
+
+.faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+    content: "-";
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    color: #fff;
+    text-align: start;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+}
+
+
+/* faq css end */
+
+/* footer css start */
+
+footer {
+    background: #000000;
+    padding: 50px 100px;
+}
+
+.footer-logo p {
+    color: #808080;
+    font-size: 16px;
+    font-weight: 400;
+    width: 78%;
+    margin: 15px 0;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links li a {
+    background: #2f2f2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px !important;
+    color: #3d3d3d;
+}
+
+.footer-logo h5 {
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.footer-logo ul li {
+    padding: 8px 0;
+}
+
+.footer-logo ul li a {
+    color: #b3b3b3;
+    font-weight: 400;
+    font-size: 15px;
+    transition: all ease 0.5s;
+}
+
+.footer-logo ul li:hover a {
+    transition: all ease 0.5s;
+    color: white;
+}
+
+.footer-logo ul li.yt:hover a {
+
+    background: #FF0000;
+}
+
+.footer-logo ul li.lk:hover a {
+
+    background: #0A66C2;
+}
+
+.footer-logo ul li.tw:hover a {
+
+    background: #1DA1F2;
+}
+
+.footer-logo ul li.fb:hover a {
+
+    background: #1877F2;
+}
+
+.footer-logo ul li.it:hover a {
+
+    background: #ee2a7b;
+}
+
+.contact-info li h6 {
+    margin-bottom: 5px;
+    display: block;
+    color: #b3b3b3;
+}
+
+.contact-info li a {
+    display: block;
+}
+
+.contact-info li span {
+    color: #b3b3b3;
+}
+
+.last-para {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.last-para ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.last-para p {
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+/* footer css end */
+
+
+@keyframes scalable {
+    0% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+@keyframes bannergirl {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
