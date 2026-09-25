@@ -324,19 +324,22 @@ class OrderController extends Controller
 
 		// ============================================
 		// CREATE ACCOUNT + AUTO LOGIN
+		// (Only if checkbox checked AND password provided)
 		// ============================================
-		if (isset($_POST['create_account'])) {
+		if (isset($_POST['create_account']) && $_POST['create_account'] == '1') {
 
-			if ($_POST['password'] == '') {
+			// Agar password empty hai to error do, user create mat karo
+			if (empty($_POST['password'])) {
 
-				$validateArr['password'] = 'min:6|required_with:confirm_password|same:confirm_password';
-				$validateArr['confirm_password'] = 'min:6';
+				$validateArr['password'] = 'required|min:6|required_with:confirm_password|same:confirm_password';
+				$validateArr['confirm_password'] = 'required|min:6';
 				$this->validate($request, $validateArr, $messageArr);
+
 			} else {
 
 				$validateArr['email'] = 'required|max:255|email|unique:users';
-				$validateArr['password'] = 'min:6|required_with:confirm_password|same:confirm_password';
-				$validateArr['confirm_password'] = 'min:6';
+				$validateArr['password'] = 'required|min:6|required_with:confirm_password|same:confirm_password';
+				$validateArr['confirm_password'] = 'required|min:6';
 				$this->validate($request, $validateArr, $messageArr);
 
 				$pw = Hash::make($_POST['password']);
