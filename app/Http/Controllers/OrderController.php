@@ -54,11 +54,11 @@ class OrderController extends Controller
 
 	public function checkout()
 	{
-		if (!Auth::check()) {
-			Session::flash('message', 'Please sign in or register to complete your checkout.');
-			Session::flash('alert-class', 'alert-warning');
-			return redirect()->route('signin');
-		}
+		// if (!Auth::check()) {
+		// 	Session::flash('message', 'Please sign in or register to complete your checkout.');
+		// 	Session::flash('alert-class', 'alert-warning');
+		// 	return redirect()->route('signin');
+		// }
 
 		$language = Session::get('language');
 		$product_detail = DB::table('products')->first();
@@ -310,7 +310,6 @@ class OrderController extends Controller
 
 	public function placeOrder(Request $request)
 	{
-
 		$validateArr = array();
 		$messageArr = array();
 		$validateArr['country'] = 'required|max:50';
@@ -323,24 +322,44 @@ class OrderController extends Controller
 
 		$id = 0;
 
+		// ============================================
+		// CREATE ACCOUNT + AUTO LOGIN
+		// ============================================
 		if (isset($_POST['create_account'])) {
 
 			if ($_POST['password'] == '') {
 
 				$validateArr['password'] = 'min:6|required_with:confirm_password|same:confirm_password';
 				$validateArr['confirm_password'] = 'min:6';
+				$this->validate($request, $validateArr, $messageArr);
 			} else {
 
 				$validateArr['email'] = 'required|max:255|email|unique:users';
+				$validateArr['password'] = 'min:6|required_with:confirm_password|same:confirm_password';
+				$validateArr['confirm_password'] = 'min:6';
 				$this->validate($request, $validateArr, $messageArr);
 
 				$pw = Hash::make($_POST['password']);
 				$fullName = $request->first_name . " " . $request->last_name;
 
-				DB::insert("INSERT INTO users(email,name,password) values('" . $_POST['email'] . "','" . $fullName . "','" . $pw . "')");
+				// ============================================
+				// CREATE USER (returns ID)
+				// ============================================
+				$userId = DB::table('users')->insertGetId([
+					'email'      => $_POST['email'],
+					'name'       => $fullName,
+					'password'   => $pw,
+					'role'       => 2, // 2 = normal user (agar role column na ho to ye line hata do)
+					'created_at' => now(),
+					'updated_at' => now(),
+				]);
 
-				$user = DB::table('users')->orderBy('id', 'desc')->first();
-				$id = $user->id;
+				$id = $userId;
+
+				// ============================================
+				// ✅ AUTO LOGIN THE NEWLY CREATED USER
+				// ============================================
+				Auth::loginUsingId($userId);
 			}
 		}
 

@@ -56,9 +56,9 @@ class CartController extends Controller
             $attrMatch = DB::table('product_attributes')
                 ->leftJoin('attributes_values', 'attributes_values.id', '=', 'product_attributes.value')
                 ->where('product_attributes.product_id', $productId)
-                ->where(function($q) use ($colorVal) {
+                ->where(function ($q) use ($colorVal) {
                     $q->where('attributes_values.value', $colorVal)
-                      ->orWhere('product_attributes.value', $colorVal);
+                        ->orWhere('product_attributes.value', $colorVal);
                 })
                 ->whereNotNull('product_attributes.image')
                 ->where('product_attributes.image', '!=', '')
@@ -184,7 +184,7 @@ class CartController extends Controller
             foreach ($cart as $key => $item) {
                 $itemTotal = $item['price'] * $item['qty'];
                 $subtotal += $itemTotal;
-                
+
                 $imgSrc = $item['image'];
                 if (!str_starts_with($imgSrc, 'http://') && !str_starts_with($imgSrc, 'https://')) {
                     $imgSrc = asset($imgSrc);
