@@ -57,7 +57,7 @@ class HomeController extends Controller
     {
         $page = DB::table('pages')->where('id', 1)->first();
         $section = DB::table('sections')->where('page_id', 1)->get();
-        $banner = DB::table('banners')->where('id', 1)->first();
+        $banner = DB::table('banners')->where('id', 1)->where('status', 1)->first();
         $product = DB::table('products')
             ->where('status', 1)
             ->get();
@@ -97,7 +97,7 @@ class HomeController extends Controller
     public function about()
     {
         $page = DB::table('pages')->where('id', 2)->first();
-        $banner = DB::table('banners')->where('id', 3)->first();
+        $banner = DB::table('banners')->where('id', 3)->where('status', 1)->first();
 
 
         return view('about', compact('page', 'banner'));
@@ -107,7 +107,7 @@ class HomeController extends Controller
     {
         $page = DB::table('pages')->where('id', 1)->first();
         $section = DB::table('sections')->where('page_id', 1)->first();
-        $banner = DB::table('banners')->where('id', 2)->first();
+        $banner = DB::table('banners')->where('id', 2)->where('status', 1)->first();
 
         $query = DB::table('products')->where('status', 1);
 
@@ -200,7 +200,7 @@ class HomeController extends Controller
     {
         $page = DB::table('pages')->where('id', 3)->first();
         $section = DB::table('sections')->where('page_id', 3)->get();
-        $banner = DB::table('banners')->where('id', 4)->first();
+        $banner = DB::table('banners')->where('id', 4)->where('status', 1)->first();
         $product = DB::table('products')
             ->where('status', 1)
             ->get();
@@ -225,7 +225,7 @@ class HomeController extends Controller
     {
         $page = DB::table('pages')->where('id', 4)->first();
         $section = DB::table('sections')->where('page_id', 4)->get();
-        $banner = DB::table('banners')->where('id', 5)->first();
+        $banner = DB::table('banners')->where('id', 5)->where('status', 1)->first();
 
         return view('contact', compact('page', 'banner', 'section'));
     }

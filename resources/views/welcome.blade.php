@@ -1,12 +1,35 @@
 @extends('layouts.main')
 @section('content')
+@if ($banner == null)
     <section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="banner-content animate">
+                    <h1><span class="blue">Custom Parody Tees</span>
+                        <br>Wear the Satire
+                    </h1>
+                    <p>Bold pop-culture mashups and clever parody designs printed on premium tees. The kind of shirt
+                        that starts conversations before you say a word.</p>
+                    <a href="products.php" class="btn web-btn">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-girl">
+        <img src="{{ asset('asset/images/banner-girl.png') }}" class="img-fluid" alt="">
+    </div>
+</section>
+@else
+    <section class="banner about-banner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="banner-content animate">
-                        <h1><span class="blue">{{ $banner->title }}</span>
-                            <br>{{ $banner->text2 }}
+                        <h1><span class="blue">{{ $banner->title }}</span>{{ $banner->text2 }}
+
                         </h1>
                         {!! $banner->description !!}
                         <a href="{{ route('product') }}" class="btn web-btn">
@@ -20,6 +43,7 @@
             <img src="{{ asset($banner->image) }}" class="img-fluid" alt="">
         </div>
     </section>
+    @endif
 
     <section class="product-section">
         <div class="container-fluid">

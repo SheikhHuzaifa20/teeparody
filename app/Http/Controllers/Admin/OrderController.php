@@ -96,9 +96,9 @@ class OrderController extends Controller
                 ';
             })
 
-            ->addColumn('payment_method', function ($row) {
-                return ucfirst($row->payment_method ?? '-');
-            })
+            // ->addColumn('payment_method', function ($row) {
+            //     return ucfirst($row->payment_method ?? '-');
+            // })
 
             ->addColumn('action', function ($row) {
                 return '

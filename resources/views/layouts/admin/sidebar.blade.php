@@ -152,7 +152,18 @@
             </li>
             @endcanAccess --}}
 
-            {{-- Account Settings --}}
+            
+{{-- Faq --}}
+@canAccess('view_faq')
+<li class="nav-item {{ request()->routeIs('admin.faq.*') ? 'active' : '' }}">
+    <a href="{{ route('admin.faq.index') }}">
+        <i class="la la-cube"></i>
+        <span class="menu-title">Faq</span>
+    </a>
+</li>
+@endcanAccess
+
+{{-- Account Settings --}}
             <li class="nav-item">
                 <a href="{{ url('admin/account/settings') }}"><i class="la la-cog"></i>
                     <span class="menu-title">Account Settings</span>

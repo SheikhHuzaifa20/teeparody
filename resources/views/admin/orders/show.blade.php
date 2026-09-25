@@ -209,12 +209,12 @@
                         {{-- Meta Info Row --}}
                         <div class="row mt-3 text-sm">
 
-                            <div class="col-md-3">
+                            {{-- <div class="col-md-3">
                                 <div class="text-muted">Payment</div>
                                 <div class="fw-semibold">
                                     {{ ucfirst($order->payment_method) }}
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="col-md-3">
                                 <div class="text-muted">Total</div>
@@ -483,7 +483,7 @@
                     </div>
                 </div>
 
-                <div class="card mt-2">
+                {{-- <div class="card mt-2">
                     <div class="card-body">
                         <h6 class="fw-bold mb-2">Payment Method</h6>
 
@@ -501,7 +501,7 @@
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <!-- Column -->
         </div>

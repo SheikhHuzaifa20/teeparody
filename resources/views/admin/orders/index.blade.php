@@ -122,7 +122,7 @@
                                     <th>Date</th>
                                     <th>Customer</th>
                                     <th>Status</th>
-                                    <th>Payment Method</th>
+                                    {{-- <th>Payment Method</th> --}}
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -168,7 +168,7 @@ $(function () {
             { data: 'created_at', name: 'created_at' },
             { data: 'customer_name', name: 'customer_name' },
             { data: 'order_status', name: 'order_status' },
-            { data: 'payment_method', name: 'payment_method' },
+            // { data: 'payment_method', name: 'payment_method' },
             {
                 data: 'action',
                 orderable: false,

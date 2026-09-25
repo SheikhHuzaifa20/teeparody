@@ -3,6 +3,8 @@
 
 
 
+
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\TestimonialsController;
 use App\Http\Controllers\Admin\NewsController;
@@ -401,5 +403,20 @@ Route::middleware(['auth', 'role:1']) // Only super_admin (role 1) can access /a
         Route::get('activity-log/{activityLog}', [ActivityLogController::class, 'show'])->name('admin.activity-log.show');
     });
 
+
+    // 🧩 Faq Management
+    Route::middleware('permission:manage_faq')->group(function () {
+        Route::get('faq/data', [FaqController::class, 'getData'])->name('admin.faq.data');
+        Route::post('faq/{faq}/toggle-status', [FaqController::class, 'toggleStatus'])->name('admin.faq.toggleStatus');
+        Route::get('faq/trash', [FaqController::class, 'trash'])->name('admin.faq.trash');
+        Route::get('faq/trash/data', [FaqController::class, 'getTrashedData'])->name('admin.faq.trash.data');
+        Route::post('faq/{id}/restore', [FaqController::class, 'restore'])->name('admin.faq.restore');
+        Route::delete('faq/{id}/force-delete', [FaqController::class, 'forceDelete'])->name('admin.faq.forceDelete');
+        Route::delete('faq/bulk-delete', [FaqController::class, 'bulkDelete'])->name('admin.faq.bulkDelete');
+        Route::post('faq/bulk-restore', [FaqController::class, 'bulkRestore'])->name('admin.faq.bulkRestore');
+        Route::delete('faq/bulk-force-delete', [FaqController::class, 'bulkForceDelete'])->name('admin.faq.bulkForceDelete');
+        Route::post('admin/faq/sort', [FaqController::class, 'sort'])->name('admin.faq.sort');
+        Route::resource('faq', FaqController::class)->names('admin.faq');
+    });
 });
 require __DIR__.'/auth.php';

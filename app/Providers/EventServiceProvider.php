@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Faq;
+use App\Observers\FaqObserver;
+
 use App\Models\Testimonial;
 use App\Observers\TestimonialObserver;
 
