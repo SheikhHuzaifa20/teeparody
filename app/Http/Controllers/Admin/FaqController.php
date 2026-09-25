@@ -37,12 +37,11 @@ class FaqController extends Controller
         }
 
         return DataTables::of($query)
-            ->addColumn('image', function ($row) {
-                if (!$row->image) {
-                    return '<span class="text-muted">No Image</span>';
+            ->addColumn('description', function ($row) {
+                if (!$row->description) {
+                    return '<span class="text-muted">No Description</span>';
                 }
-                // Lazy loading image
-                return '<img src="'.asset($row->image).'" class="lazy-load" width="120" />';
+                return '<p>' . $row->description . '</p>';
             })
             ->addColumn('status', function ($row) {
                 $checked = $row->status ? 'checked' : '';
@@ -59,7 +58,7 @@ class FaqController extends Controller
             ->addColumn('action', function ($row) {
                 $actions = '';
                 if (auth()->user()->hasPermission('edit_faq')) {
-                    $actions .= '<a href="'.url('admin/faq/'.$row->id.'/edit').'"
+                    $actions .= '<a href="' . url('admin/faq/' . $row->id . '/edit') . '"
                                     class="btn btn-sm btn-info"
                                     title="Edit Faq">
                                     <i class="la la-pencil"></i>
@@ -67,14 +66,14 @@ class FaqController extends Controller
                 }
                 if (auth()->user()->hasPermission('delete_faq')) {
                     $actions .= '<button class="btn btn-sm btn-danger deleteFaq"
-                                    data-id="'.$row->id.'"
+                                    data-id="' . $row->id . '"
                                     title="Delete Faq">
                                     <i class="la la-trash"></i>
                                   </button>';
                 }
                 return $actions ?: '<span class="text-muted">No actions</span>';
             })
-            ->rawColumns(['image', 'status', 'action'])
+            ->rawColumns(['description', 'status', 'action'])
             ->make(true);
     }
 
@@ -163,17 +162,19 @@ class FaqController extends Controller
         $items = Faq::onlyTrashed()->orderByDesc('id')->get();
 
         return DataTables::of($items)
-            ->addColumn('checkbox', fn($row) =>
-                '<input type="checkbox" class="rowCheckbox" value="'.$row->id.'">'
+            ->addColumn(
+                'checkbox',
+                fn($row) =>
+                '<input type="checkbox" class="rowCheckbox" value="' . $row->id . '">'
             )
-            ->addColumn('image', function($row) {
+            ->addColumn('image', function ($row) {
                 return $row->image
-                    ? '<img src="'.asset($row->image).'" class="lazy-load" width="120" />'
+                    ? '<img src="' . asset($row->image) . '" class="lazy-load" width="120" />'
                     : '<span class="text-muted">No Image</span>';
             })
-            ->addColumn('action', function($row) {
-                $restore = '<button class="btn btn-sm btn-success restoreFaq" data-id="'.$row->id.'"><i class="la la-refresh"></i></button>';
-                $delete = '<button class="btn btn-sm btn-danger forceDeleteFaq" data-id="'.$row->id.'"><i class="la la-trash"></i></button>';
+            ->addColumn('action', function ($row) {
+                $restore = '<button class="btn btn-sm btn-success restoreFaq" data-id="' . $row->id . '"><i class="la la-refresh"></i></button>';
+                $delete = '<button class="btn btn-sm btn-danger forceDeleteFaq" data-id="' . $row->id . '"><i class="la la-trash"></i></button>';
                 return $restore . ' ' . $delete;
             })
             ->rawColumns(['checkbox', 'image', 'action'])

@@ -110,7 +110,7 @@ $(function() {
                 }
             },
             { data: 'title', name: 'title' },
-            { data: 'image', name: 'image', orderable: false, searchable: false },
+            {data: 'description', name: 'description'},
             { data: 'status', name: 'status', orderable: false, searchable: false },
             { data: 'created_at', name: 'created_at' },
             { data: 'action', name: 'action', orderable: false, searchable: false }
