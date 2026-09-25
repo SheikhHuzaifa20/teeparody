@@ -331,8 +331,32 @@ class ProductController extends Controller
 
             $data = $request->validated();
 
-            // Generate / update slug
-            $data['slug'] = $request->slug;
+            // =========================================================
+            // SLUG HANDLING (FIXED - Duplicate entry error solved)
+            // =========================================================
+
+            if ($request->filled('slug')) {
+                $slug = Str::slug($request->slug);
+            } elseif (!empty($data['name'])) {
+                $slug = Str::slug($data['name']);
+            } else {
+                $slug = $product->slug; // existing slug preserve
+            }
+
+            // Ensure slug is unique (ignore current product)
+            $originalSlug = $slug;
+            $counter = 1;
+            while (
+                Product::where('slug', $slug)
+                ->where('id', '!=', $product->id)
+                ->exists()
+            ) {
+                $slug = $originalSlug . '-' . $counter;
+                $counter++;
+            }
+
+            $data['slug'] = $slug;
+
 
             // Updated by
             $data['updated_by'] = auth()->id();
@@ -342,13 +366,8 @@ class ProductController extends Controller
             // CHECKBOX FIELDS
             // =========================================================
 
-            $data['is_charge_tax'] = $request->is_charge_tax == "on"
-                ? 1
-                : 0;
-
-            $data['stock'] = $request->stock == "on"
-                ? 1
-                : 0;
+            $data['is_charge_tax'] = $request->is_charge_tax == "on" ? 1 : 0;
+            $data['stock'] = $request->stock == "on" ? 1 : 0;
 
 
             // =========================================================
@@ -369,7 +388,6 @@ class ProductController extends Controller
                     ->where('is_primary', 1)
                     ->first();
 
-
                 // Delete old primary image file
                 if ($oldPrimaryImage) {
 
@@ -384,14 +402,12 @@ class ProductController extends Controller
                     $oldPrimaryImage->delete();
                 }
 
-
                 // Upload new primary image
                 $primaryImagePath = $this->uploadFile(
                     $request->file('image'),
                     'uploads/products/',
                     'product'
                 );
-
 
                 // Save new primary image
                 ProductImage::create([
@@ -416,7 +432,6 @@ class ProductController extends Controller
                         'gallery'
                     );
 
-
                     ProductImage::create([
                         'product_id' => $product->id,
                         'image_path' => $galleryPath,
@@ -438,9 +453,7 @@ class ProductController extends Controller
             |--------------------------------------------------------------------------
             */
 
-                $oldAttributes = $product->attributes()
-                    ->get();
-
+                $oldAttributes = $product->attributes()->get();
 
                 $oldImages = $oldAttributes
                     ->pluck('image')
@@ -477,7 +490,6 @@ class ProductController extends Controller
 
                     $imagePath = null;
 
-
                     // =====================================================
                     // NEW VARIATION IMAGE
                     // =====================================================
@@ -497,7 +509,6 @@ class ProductController extends Controller
                         );
                     }
 
-
                     // =====================================================
                     // EXISTING VARIATION IMAGE
                     // =====================================================
@@ -508,7 +519,6 @@ class ProductController extends Controller
 
                         $usedOldImages[] = $imagePath;
                     }
-
 
                     // =====================================================
                     // CREATE PRODUCT ATTRIBUTE
@@ -568,7 +578,6 @@ class ProductController extends Controller
                         $variant = $product->variants()
                             ->find($variantData['id']);
 
-
                         if ($variant) {
 
                             $variant->update([
@@ -585,7 +594,6 @@ class ProductController extends Controller
                             ]);
                         }
                     }
-
 
                     // =====================================================
                     // CREATE NEW VARIANT
@@ -683,7 +691,6 @@ class ProductController extends Controller
             // =========================================================
 
             DB::rollBack();
-
 
             return redirect()
                 ->back()
