@@ -357,17 +357,17 @@
                                     <div class="form-group mb-3">
                                         <input type="password" class="form-control left" name="password" id="password"
                                             placeholder="Password" autocomplete="new-password">
-                                        <span class="invalid-feedback d-block">
+                                        {{-- <span class="invalid-feedback d-block">
                                             <strong>{{ $errors->first('password') }}</strong>
-                                        </span>
+                                        </span> --}}
                                     </div>
                                     <div class="form-group mb-3">
                                         <input type="password" class="form-control right" name="confirm_password"
                                             id="confirm_password" placeholder="Confirm Password"
                                             autocomplete="new-password">
-                                        <span class="invalid-feedback d-block">
+                                        {{-- <span class="invalid-feedback d-block">
                                             <strong>{{ $errors->first('confirm_password') }}</strong>
-                                        </span>
+                                        </span> --}}
                                     </div>
                                 </div>
                             @endif
