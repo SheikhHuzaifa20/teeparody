@@ -81,7 +81,7 @@
                         }
                     @endphp
                     <div class="col-lg-4 col-md-4 col-6 mb-4">
-                        <div class="product-main {{ $loop->iteration % 2 != 0 ? 'bg-blk' : '' }}">
+                        <div class="product-main {{ ($loop->iteration % 3 == 2) ? '' : 'bg-blk' }}">
                             <div class="product-picture">
                                 <a href="{{ route('product_detail', $item->id) }}">
                                     @if ($primaryImg)
