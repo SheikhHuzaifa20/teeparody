@@ -218,7 +218,7 @@
                                 <option value="text">Text</option>
                                 <option value="textarea">Textarea</option>
                                 <option value="image">Image</option>
-                                <option value="video">Video</option>
+                                {{-- <option value="video">Video</option> --}}
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Add
