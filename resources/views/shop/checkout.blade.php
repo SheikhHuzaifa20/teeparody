@@ -403,7 +403,7 @@
                             <h3> Total Price <span>${{ number_format($subtotal + $variation, 2) }}</span></h3>
                         </div>
                     </div>
-                    <div id="accordion" class="payment-accordion">
+                    {{-- <div id="accordion" class="payment-accordion">
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
@@ -452,7 +452,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <hr>
 
                     <button type="submit" class="hvr-wobble-skew" style="display:none">place order</button>
